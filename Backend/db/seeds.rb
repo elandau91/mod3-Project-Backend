@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+User.destroy_all
+Post.destroy_all
+Like.destroy_all
+
+
+User.create(name: 'Bob', email: 'bob@example.com')
+
+5.times do
+    Post.create(title: Faker::Movies::StarWars.planet, content: Faker::Movies::StarWars.quote, date: Faker::Date.in_date_period, user_id: User.all.sample.id)
+end
+
