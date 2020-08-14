@@ -18,3 +18,5 @@ User.create(name: 'Bob', email: 'bob@example.com')
     Post.create(title: Faker::Movies::StarWars.planet, content: Faker::Movies::StarWars.quote, date: Faker::Date.in_date_period, user_id: User.all.sample.id)
 end
 
+Like.create(user_id: User.all.sample.id, post_id: Post.all.sample.id)
+
