@@ -20,3 +20,6 @@ end
 
 Like.create(user_id: User.all.sample.id, post_id: Post.all.sample.id)
 
+10.times do 
+    Comment.create(user_id: User.all.sample.id, post_id: Post.all.sample.id, content: Faker::Movies::StarWars.quote, name: User.all.sample.name)
+end
