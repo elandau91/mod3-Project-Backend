@@ -14,8 +14,8 @@ Like.destroy_all
 
 User.create(name: 'Bob', email: 'bob@example.com')
 
-5.times do
-    Post.create(title: Faker::Movies::StarWars.planet, content: Faker::Movies::StarWars.quote, date: Faker::Date.in_date_period, user_id: User.all.sample.id)
+10.times do
+    Post.create(title: Faker::Movies::StarWars.planet, content: Faker::Movies::StarWars.quote, date: Faker::Date.in_date_period, user_id: User.all.sample.id, img_url: Faker::Fillmurray.image)
 end
 
 Like.create(user_id: User.all.sample.id, post_id: Post.all.sample.id)

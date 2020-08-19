@@ -15,6 +15,10 @@ class PostsController < ApplicationController
         post.update(post_params)
     end
 
+    def create
+        Post.create(new_post_params)
+    end
+
     def destroy
         post = Post.find(params[:id])
 
@@ -25,6 +29,10 @@ class PostsController < ApplicationController
     
     def post_params
         params.require(:post).permit(:content)
+    end
+
+    def new_post_params
+        params.require(:post).permit(:content, :user_id, :title, :date, :img_url)
     end
 
 end
