@@ -12,7 +12,7 @@ Post.destroy_all
 Like.destroy_all
 
 
-User.create(name: 'Bob', email: 'bob@example.com')
+User.create(name: 'Bob', email: 'bob@example.com', avatar: "https://i.insider.com/5de54e6f79d7571aaa0155a2?width=1136&format=jpeg")
 
 10.times do
     Post.create(title: Faker::Movies::StarWars.planet, content: Faker::Movies::StarWars.quote, date: Faker::Date.in_date_period, user_id: User.all.sample.id, img_url: Faker::Fillmurray.image)
