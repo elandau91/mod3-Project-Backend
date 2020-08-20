@@ -10,4 +10,15 @@ class UsersController < ApplicationController
         user = User.find_by(id: params[:id])
         render json: user, include: [:posts]
     end
+
+    def update
+        user = User.find(params[:id])
+        user.update(user_params)
+    end
+
+    private
+    def user_params
+        params.require(:user).permit(:name, :email)
+    end
+
 end
