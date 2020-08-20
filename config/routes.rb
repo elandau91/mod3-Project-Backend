@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :likes
   resources :comments
+  get '*other', to: 'static#index'
 end
