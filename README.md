@@ -9,7 +9,7 @@ SopaBox is an spa blogging application where users can create, read, edit or del
 ### `Installation`
 
 To view the site, I recommend going to the live [SoapBox](https://soapbox-blog-app.herokuapp.com/) site hosted on heroku.<br><br>
-If you'd like you can also fork and load the site in developement, in conjunction with the javascript frontend [here](https://github.com/elandau91/mod3-Project-Backend). When loading the site through the repos, make sure to run the rails server on the backend before doing the npm start or yarn start on the frontend repo.
+If you'd like you can also fork and load the site in developement, in conjunction with the javascript frontend [here](https://github.com/elandau91/mod3-Project-Frontend). When loading the site through the repos, make sure to run the rails server on the backend before doing the npm start or yarn start on the frontend repo.
 
 
 ### License
